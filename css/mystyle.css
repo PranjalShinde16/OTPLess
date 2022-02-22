@@ -1,0 +1,40 @@
+.howitworks {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1rem solid;
+  border-left-color: #00d563;
+  height: 8rem;
+  margin-top: 4rem;
+  color: #031738;
+}
+
+.head1 {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+}
+.head2{
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.howitworkstext{
+  line-height: 3.5rem;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+.installbutton{
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  background-color: #00d563;
+  padding: 0.1rem 2.5rem;
+  margin-bottom: 1rem;
+}
+.ins{
+  color: white;
+}
+.ins:hover{
+  color: white;
+}

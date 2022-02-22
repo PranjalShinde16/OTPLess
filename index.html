@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>OTPless Documentation</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"
+            aria-hidden="true"></i></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#mode').addEventListener('click', () => {
+                document.querySelector('html').classList.toggle('dark');
+            })
+        });
+    </script>
+
+    <div id="wrapper">
+        <div id="mode">
+            <div class="dark">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>lightmode</title>
+                    <path fill="currentColor"
+                        d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z">
+                    </path>
+                </svg>
+            </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor"
+                        d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="container">
+            <section id="top" class="section docs-heading">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="https://otpless.com/assets/imgs/logo.png" style="height:50px">
+                    </div>
+                </div>
+                <hr>
+            </section>
+            <div class="row">
+                <div class="col-md-9">
+                    <section class="welcome">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Documentation
+                                    <hr>
+                                </h2>
+                                <div class="row">
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                Before you start, please <a href="https://otpless.in/signup"
+                                                    target="_blank">Sign up</a> and <a
+                                                    href="https://otpless.in/register" target="_blank">register your
+                                                    application</a> on OTPless.
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <p>
+                                            <h4><b>Welcome to OTPless.com</b></h4>
+                                            <br>
+
+                                            Adding <b>"Sign in with WhatsApp" button in your application simplifies
+                                                register/login a user using mobile number authentication.</b><br>
+                                            It is a one tap flow that does not require users to enter any OTPs (one time
+                                            passwords) <br>
+                                            This signficantly improves your application security and user conversion
+                                            rate. <br>
+
+                                            <b>This works on any device, any platform (Mobile Devices, Desktop, Web,
+                                                Android, iOS, PhoneGap etc)</b>
+                                            </p>
+
+                                            <video width="400" autoplay loop muted playsinline>
+                                                <source src="images/upload/sample-mp4-file.mp4" type="video/mp4" />
+                                                <source src="movie.ogg" type="video/ogg" />
+                                                Your browser does not support the video tag.
+                                            </video>
+
+                                            <h4><b>Integration Guide</b></h4>
+                                            <p>Integrating "Sign in with WhatsApp" button in your app is really simple:
+                                            </p>
+                                            <ol>
+                                                <li>
+                                                    Add "Sign in with WhatsApp" button in your project
+                                                    (web/iOS/android)<br>
+                                                    <p>This HTML snippet references our CDN-hosted buttons:</p>
+                                                    <pre class="brush: html; ">
+                                                            <img src="https://otpless.com/documentation/images/upload/sign-in-with-whatsapp.png" srcset="https://otpless.com/documentation/images/upload/sign-in-with-whatsapp.png 1x, https://otpless.com/documentation/images/upload/sign-in-with-whatsapp.png 2x" />
+                                                            <img src="https://otpless.com/documentation/images/upload/login-with-whatsapp.png" srcset="https://otpless.com/documentation/images/upload/login-with-whatsapp.png 1x, https://otpless.com/documentation/images/upload/login-with-whatsapp.png 2x" />
+                                                    </pre>
+                                                    <p> Example rendering:</p>
+                                                    <div class="row">If you want to host the assets yourself, please
+                                                        download these
+                                                        images:</div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="images/upload/sign-in-with-whatsapp.png" alt=""
+                                                                class="img-responsive img-thumbnail">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <img src="images/upload/login-with-whatsapp.png" alt=""
+                                                                class="img-responsive img-thumbnail">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <a href="images/upload/sign-in-with-whatsapp.svg"
+                                                                target="_blank">Download .svg</a><br>
+                                                            <a href="images/upload/sign-in-with-whatsapp.png"
+                                                                target="_blank">Download .png</a>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <a href="images/upload/login-with-whatsapp.svg"
+                                                                target="_blank">Download
+                                                                .svg</a><br>
+                                                            <a href="images/upload/login-with-whatsapp.png"
+                                                                target="_blank">Download
+                                                                .png</a>
+                                                        </div>
+                                                    </div><br>
+                                                </li>
+                                                <li>Once a user clicks the button, call getUrl API <br>
+                                                    <pre>https://api.otpless.com/api/v1/user/getSignupUrl</pre>
+                                                    HEADERS<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>clientid</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            client_id
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>clientsecret</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            client_secret
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>state (Optional)</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            device_id
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    Example Request<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <pre class="brush: html; ">curl --location --request GET 'https://api.otpless.com/api/v1/user/getSignupUrl' \
+--header 'clientid: client_id' \
+--header 'clientsecret: client_secret' \
+--header 'state: device_id'</pre>
+                                                    Example Response<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <pre class="brush: html; ">{
+    "status": "SUCCESS",
+    "url": "whatsapp://send?phone=12199999764&text=​​Hi%20WhatsApp!%0APlease%20verify%20my%20number%20with%20OTPless."
+}</pre>
+                                                </li><br>
+                                                <li>Redirect user to the redirectUrl received in the response<br>
+                                                    Examples:<br>
+                                                    whatsapp://send?phone=12199999764&text=​​Hi%20WhatsApp!%0APlease%20verify%20my%20number%20with%20OTPless.
+                                                </li><br>
+                                                <li>
+                                                    User authenticates in WhatsApp app by sending a pre-populated
+                                                    message. Once authenticated, the user gets redirected back
+                                                    to your "callback URI"
+                                                    When you register your app in OTPless, you would be asked to enter
+                                                    your Callback URI
+                                                    Callback URI can be either an https URL or a custom URI scheme for
+                                                    your android/iOS App <br>
+                                                    Examples:<br>
+                                                    https://xyz.com/otpless/callback <br>
+                                                    xyz://otpless/callback
+                                                </li><br>
+                                                <li>OTPless will append a "token" when redirecting users back to your
+                                                    callback URI
+                                                    <br>Examples:<br>
+                                                    https://xyz.com/otpless/callback?token=1234567890<br>
+                                                    xyz://otpless/callback?token=1234567890
+                                                </li><br>
+                                                <li>Use this token to call getUser API and retrieve user details
+                                                    (WhatsApp number, name)
+                                                    <br>
+                                                    <pre>https://api.otpless.com/api/v1/user/getUserDetails</pre>
+                                                    HEADERS<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>clientid</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            client_id
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>clientsecret</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            client_secret
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <b>state (Optional)</b>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            device_id
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    BODY<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <pre class="brush: html; ">
+{
+    "token": "cf15eff6-3dc8-487a-98a7-9927ecc23b85"
+}</pre>
+                                                    Example Request<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <pre class="brush: html; ">curl --location --request POST 'https://api.otpless.com/api/v1/user/getUserDetails' \
+--header 'clientid: client_id' \
+--header 'clientsecret: client_secret' \
+--header 'state: device_id' \
+--data-raw '{
+"token": "cf15eff6-3dc8-487a-98a7-9927ecc23b85"
+}'</pre>
+                                                    Example Response<br>
+                                                    <hr style="margin-top: 5px;margin-bottom: 5px;">
+                                                    <pre class="brush: html; ">{
+    "status": "SUCCESS",
+    "name": "Joe",
+    "mobile": "910123456789",
+    "state": "asasas-82dc-2des-232d-asasasasasasasasas",
+    "stateMatched": true
+}</pre>
+                                                </li><br>
+                                                <li>Now you can either sign in or sign up the user as per your
+                                                    application flow.</li>
+                                            </ol>
+
+<!-- My Code starts here -->
+
+<div class="howitworks">
+<h1 class="head1">How it works</h1>
+</div>
+<div class="howitworkstext">
+  <ul style="list-style-type:disc">
+    <li>Register your app at https://www.otpless.com </li>
+    <li>Create New app adding following details
+      <ul>
+        <li> * Select Application type Android</li>
+        <li> * Enter App name</li>
+        <li> * Enter Redirect uri (eg. “sample://otpless”)</li>
+        <li> * Enter package name (eg. com.sample.app )</li>
+      </ul>
+    </li>
+    <li>Setup your server side with Rest api doc provided , It will include initiating auth and getting user details using client id and client secret (Note : Please keep your id and secret safe)</li>
+  </ul>
+</div>
+
+<div class="howitworks">
+  <h1 class="head1">Installation</h1>
+</div>
+<div class="howitworkstext">
+  <h2 class="head2">Requirements</h2>
+  <p>Minimum SDK Version is api 17</p>
+  <button type="button" name="button" class="installbutton"><a href="dummy.aar" download="dummy.aar" class="ins">Installation</a></button>
+  <ul>
+    <li>Add Otpless aar file in your android project</li>
+  </ul>
+</div>
+
+<div class="howitworks">
+  <h1 class="head1">Usage</h1>
+</div>
+<div class="howitworkstext">
+  <p>In your Activity file import the following</p>
+
+<!-- Code here -->
+<pre class="brush: html; ">{
+  import com.otpless.main.Otpless;
+  import com.otpless.main.OtplessIntentRequest;
+  import com.otpless.main.OtplessProvider;
+  import com.otpless.main.OtplessTokenData;
+
+
+  * After getting the intentUri via initiate auth from your backend api that connects to otpless service.
+
+  // declare otpless variable
+  private Otpless otpless;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     //Initialize OTPLess Instance
+     otpless = OtplessProvider.getInstance(this).init(this::onOtplessResult);
+  }
+
+  //Call back function Where token is received
+  private void onOtplessResult(@Nullable OtplessTokenData response) {
+     if (response == null) return;
+  //Send this token to your backend end api to fetch user details from otpless service
+     String token = response.getToken();
+  }
+}</pre>
+
+
+</div>
+
+
+<!-- My code ends here -->
+
+
+                                            <h5>
+                                                <p> <b>If you need any help or just want to chat about something, please
+                                                        give us
+                                                        a shout at <a
+                                                            href="mailto:developers@otpless.com">developers@otpless.com</a></b>
+                                                </p>
+                                            </h5>
+                                            <br>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
